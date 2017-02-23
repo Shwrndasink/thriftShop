@@ -1,0 +1,12 @@
+{
+  "name": "thriftShop",
+  "version": "1.0.0",
+  "description": "I wear your grandads clothes",
+  "main": "index.js",
+  "repository": "https://github.com/Shwrndasink/thriftShop.git",
+  "author": "Marc White <mwhite@overstock.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^2.2.1"
+  }
+}
