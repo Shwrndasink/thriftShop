@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 const myName = 'Marc';
-// import styles from '../sass/styles.scss';  Need to get this working
+
+// require('styles.css');
 
 const root = document.getElementById('root');
 root.innerHTML = 'Hello World'

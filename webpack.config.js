@@ -6,8 +6,7 @@ const path = require('path');
 const config = {
   context: path.resolve(__dirname, './src'),
   entry: {
-	  app: './index.js',
-	  //vendor: ['react', 'react-dom']
+	  app: './index.js'
   },
   output: {
     path: path.resolve(__dirname, './dist'),
@@ -33,17 +32,12 @@ const config = {
 			  use: ['style-loader', 'css-loader', 'sass-loader']
 		  })
 	  }
-
     ]
   },
   plugins: [
 	new ExtractTextPlugin('styles.css'),
     new webpack.optimize.UglifyJsPlugin(),
     new HtmlWebpackPlugin({template: './html/index.html'}),
-	new webpack.optimize.CommonsChunkPlugin({
-		name: 'commons',
-		filename: './commons.js'
-	})
 ]
 };
 

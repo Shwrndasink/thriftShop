@@ -9,7 +9,7 @@
   "scripts": {
 	  "clean": "rimraf dist",
       "dev": "webpack --progress --colors",
-      "build": "yarn run clean && webpack --config ./webpack.production.config.js -p --progress",
+      "build": "yarn run clean && webpack --config ./webpack.config.js --progress",
       "server": "webpack-dev-server --open --watch"
   },
   "devDependencies": {
