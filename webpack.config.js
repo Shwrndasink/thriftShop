@@ -30,15 +30,18 @@ const config = {
   	  },
 	  {
 		  test: /\.scss$/,
-		  use: ExtractTextPlugin.extract({
-			  fallback: 'style-loader',
-			  use: ['style-loader', 'css-loader', 'sass-loader']
-		  })
+		  include: [path.resolve(__dirname, 'src/sass')],
+		  use: [{
+				  loader: "style-loader" // creates style nodes from JS strings
+			  }, {
+				  loader: "css-loader" // translates CSS into CommonJS
+			  }, {
+				  loader: "sass-loader" // compiles Sass to CSS
+			  }]
 	  }
     ]
   },
   plugins: [
-	new ExtractTextPlugin('styles.css'),
     new webpack.optimize.UglifyJsPlugin(),
     new HtmlWebpackPlugin({template: './html/index.html'}),
 	new CommonsChunkPlugin({

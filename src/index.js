@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 const myName = 'Marc';
 
-// require('styles.css');
+import css from './sass/styles.scss';
 
 const root = document.getElementById('root');
 root.innerHTML = 'Hello World'
